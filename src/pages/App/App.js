@@ -19,9 +19,7 @@ class App extends Component {
     var allStarShips=[];
     do{
       const starShips = await getAllStarShips(endpoint);
-      console.log('all ', starShips);
       endpoint= starShips.next;
-      console.log('next ', endpoint);
       allStarShips.push(starShips);
     }while(endpoint);
     this.setState({
@@ -36,7 +34,6 @@ class App extends Component {
   }
 
   render() {
-    console.log('isloading ', this.state.isLoading, ' starShips ', this.state.starShips);
     if(!this.state.isLoading && this.state.starShips){
     return (
       <BrowserRouter>
@@ -57,7 +54,7 @@ class App extends Component {
         }/> 
       </Switch>
       </BrowserRouter>
-    );
+    )
     }
     else{
       return (
@@ -66,7 +63,7 @@ class App extends Component {
             <h1>Waiting for data to load...</h1>
         </header>
       </div>
-      );
+      )
     }
   }
 }

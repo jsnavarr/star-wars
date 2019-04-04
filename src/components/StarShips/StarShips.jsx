@@ -22,9 +22,9 @@ const starShips = (props) => (
                     </Link>
                   </div>
             )
-        )};
+        )}
     </div>
-);
+)
       
 
 export default starShips;

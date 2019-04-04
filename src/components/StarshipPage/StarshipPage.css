@@ -1,0 +1,13 @@
+.all-ships {
+  display:flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.ship-button {
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 20px;
+    background: azure;
+  }
